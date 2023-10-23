@@ -221,5 +221,23 @@ print("Binary representation:", decimal_to_binary(decimal_num))
     decimal_num //= 2: The decimal number is updated by integer division by 2, effectively moving to the next bit for the binary representation.
     If the input decimal number was 0, the binary representation is set to "0".
 
-This code captures a decimal number from the user and converts it to binary using the division-remainder method. It then prints the binary representation of the input decimal number.'''
+This code captures a decimal number from the user and converts it to binary using the division-remainder method. It then prints the binary representation of the input decimal number.
+
+Binary numbers might seem unfamiliar at first, but they follow a strict logical pattern based on the powers of 2. Let's break it down:
+
+Binary is a base-2 number system, meaning it only uses two digits: 0 and 1. Each digit in a binary number represents a power of 2. Starting from the rightmost digit (or the least significant bit), the first digit represents 2^0 (which is 1), the second digit represents 2^1 (which is 2), the third digit represents 2^2 (which is 4), and so on.
+
+For example, the binary number 1011 can be calculated as follows:
+
+    1 * 2^3 (the leftmost digit, which is 1, represents 2^3 = 8)
+    0 * 2^2 (the second digit from the left is 0, so it doesn't contribute to the total)
+    1 * 2^1 (the third digit from the left, which is 1, represents 2^1 = 2)
+    1 * 2^0 (the rightmost digit, which is 1, represents 2^0 = 1)
+
+Adding these together (8 + 0 + 2 + 1) gives us the decimal equivalent: 11.
+
+In the context of the division-remainder method used in the Python code I provided earlier, we are essentially breaking down a decimal number into a sum of powers of 2, which results in its binary representation.
+
+Understanding this logic helps when working with binary numbers, especially in computer science and digital electronics, where binary is commonly used to represent data and perform calculations inside computers.
+'''
 
